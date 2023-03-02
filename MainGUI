@@ -18,8 +18,8 @@ local Tab = Window:MakeTab({
 })
 
 -- Tab 2
-local Tab = Window:MakeTab({
-	Name = "Main",
+local Tab2 = Window:MakeTab({
+	Name = "Teleports",
 	Icon = "rbxassetid://4483345998",
 	PremiumOnly = false
 })
@@ -79,6 +79,12 @@ end
   	end    
 })
 
+Tab2:AddButton({
+	Name = "Go to Washable Kingdoms",
+	Callback = function()
+      	hrp.CFrame = game.Workspace.ClockTower.Clock.Second.CFrame	
+  	end    
+})
 
 
 -- For the end of the script
