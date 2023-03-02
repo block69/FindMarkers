@@ -82,7 +82,7 @@ end
 Tab2:AddButton({
 	Name = "Go to Washable Kingdoms",
 	Callback = function()
-      	hrp.CFrame = game.Workspace.ClockTower.Clock.Second.CFrame	
+      	hrp.CFrame = game:GetService("Workspace")["Clock Tower"]["Clock Part"].Second.CFrame	
   	end    
 })
 
