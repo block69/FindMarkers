@@ -39,7 +39,6 @@ local Section2 = Tab2:AddSection({
 	Name = "Teleports"
 })
 
--- Creating a button
 Tab:AddButton({
 	Name = "Get a few markers",
 	Callback = function()
@@ -53,7 +52,6 @@ Tab:AddButton({
   	end    
 })
 
--- Creating a Textbox
 Tab:AddTextbox({
 	Name = "Go to any marker",
 	Callback = function(txt)
@@ -86,6 +84,17 @@ Tab2:AddButton({
   	end    
 })
 
+Tab:AddButton({
+	Name = "Get Tip Jar Marker (talk to him) last for 10 sec",
+	Callback = function()
+      		hrp.CFrame = CFrame.new(-183.469727, -14.4727926, 58.781044, 0.999982536, -1.53139741e-08, -0.0059080408, 1.60465881e-08, 1, 1.23955417e-07, 0.0059080408, -1.24048057e-07, 0.999982536)
+				wait(10.5)
+				hrp.CFrame = game:GetService("Workspace").Coins.TipJarCoin.CFrame
+				hrp.CFrame = game:GetService("Workspace").JarForTips.Part.CFrame
+				fireproximityprompt(game:GetService("Workspace").JarForTips.ProxPart.ProximityPrompt)
+				hrp.CFrame = game:GetService("Workspace")["Tip Jar Marker"].Part.CFrame
+		end
+})
 
 -- For the end of the script
 OrionLib:Init()
